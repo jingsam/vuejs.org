@@ -2,17 +2,18 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>The Vue Constructor - vue.js</title>
+        <title>vue.js</title>
         <meta charset="utf-8">
         <meta name="description" content="Vue.js - Intuitive, Fast and Composable MVVM for building interactive interfaces.">
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-        <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600|Lato|Inconsolata' rel='stylesheet' type='text/css'>
+        <link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:400,600|Roboto Mono' rel='stylesheet' type='text/css'>
+        <link href='//fonts.googleapis.com/css?family=Dosis:300,500&text=Vue.js' rel='stylesheet' type='text/css'>
+        <link href="//cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css" rel='stylesheet' type='text/css'>
         <link rel="icon" href="/images/logo.png" type="image/x-icon">
         <script>
             window.PAGE_TYPE = "api"
         </script>
         <link rel="stylesheet" href="/css/page.css" type="text/css">
-
         <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -22,7 +23,7 @@
   ga('create', 'UA-46852172-1', 'vuejs.org');
   ga('send', 'pageview');
 </script>
-        <script src="/js/vue.min.js"></script>
+        <script src="/js/vue.js"></script>
     </head>
     <body>
         <div id="mobile-bar">
@@ -31,78 +32,428 @@
         </div>
         
             <div id="header">
-    <a id="logo" href="/">
-        <img src="/images/logo.png">
-        <span>Vue.js</span>
-    </a>
-    <ul id="nav">
-        <li><a href="/guide/" class="nav-link">Guide</a></li>
-<li><a href="/api/" class="nav-link current">API Reference</a></li>
+  <a id="logo" href="/">
+    <img src="/images/logo.png">
+    <span>Vue.js <sup>2.0 RC</sup></span>
+  </a>
+  <span style="
+    position: absolute;
+    top: 100%;
+    left: 60px;
+    padding: 0 10px;
+    background: #ef9f00;
+    border-radius: 3px;
+    margin-top: -15px;
+    line-height: 30px;
+    color: white;
+    font-weight: bold;
+    letter-spacing: 1px;
+    box-shadow: 0 1px 2px rgba(0,0,0,.3);
+  ">
+    WORK IN PROGRESS
+  </span>
+  <ul id="nav">
+    <li>
+  <form id="search-form">
+    <input type="text" id="search-query-nav" class="search-query st-default-search-input">
+  </form>
+</li>
+<li><a href="/guide/" class="nav-link">Guide</a></li>
+<li><a href="/api/" class="nav-link current">API</a></li>
 <li><a href="/examples/" class="nav-link">Examples</a></li>
 <li><a href="/blog/" class="nav-link">Blog</a></li>
-<li><a href="https://github.com/yyx990803/vue" target="_blank" class="nav-link">GitHub</a></li>
-    </ul>
+<li class="nav-dropdown-container">
+  <a class="nav-link">Community</a><span class="arrow"></span>
+  <ul class="nav-dropdown">
+    <li><a href="https://github.com/vuejs/vue" class="nav-link" target="_blank">GitHub</a></li>
+    <li><a href="http://forum.vuejs.org" class="nav-link" target="_blank">Forum</a></li>
+    <li><a href="https://gitter.im/vuejs/vue" class="nav-link" target="_blank">Chat</a></li>
+    <li><a href="https://twitter.com/vuejs" class="nav-link" target="_blank">Twitter</a></li>
+  </ul>
+</li>
+
+
+  </ul>
 </div>
+
             <div id="main">
                 
                     
     <div class="sidebar">
     <ul class="main-menu">
-        <li><a href="/guide/" class="nav-link">Guide</a></li>
-<li><a href="/api/" class="nav-link current">API Reference</a></li>
+        <li>
+  <form id="search-form">
+    <input type="text" id="search-query-sidebar" class="search-query st-default-search-input">
+  </form>
+</li>
+<li><a href="/guide/" class="nav-link">Guide</a></li>
+<li><a href="/api/" class="nav-link current">API</a></li>
 <li><a href="/examples/" class="nav-link">Examples</a></li>
 <li><a href="/blog/" class="nav-link">Blog</a></li>
-<li><a href="https://github.com/yyx990803/vue" target="_blank" class="nav-link">GitHub</a></li>
+<li class="nav-dropdown-container">
+  <a class="nav-link">Community</a><span class="arrow"></span>
+  <ul class="nav-dropdown">
+    <li><a href="https://github.com/vuejs/vue" class="nav-link" target="_blank">GitHub</a></li>
+    <li><a href="http://forum.vuejs.org" class="nav-link" target="_blank">Forum</a></li>
+    <li><a href="https://gitter.im/vuejs/vue" class="nav-link" target="_blank">Chat</a></li>
+    <li><a href="https://twitter.com/vuejs" class="nav-link" target="_blank">Twitter</a></li>
+  </ul>
+</li>
+
+
     </ul>
     <div class="list">
-        <h2>Api</h2>
+        <div id="donate" style="margin-bottom: 20px">
+            <span class="wrapper" style="width: 110px">
+              <img src="/images/patreon.png">
+              <a href="/support-vuejs">Support Vue.js</a>
+            </span>
+        </div>
+        <h2>
+            API
+            <select class="version-select">
+                <option selected>2.0</option>
+                <option>1.0</option>
+                <option>0.12</option>
+                <option>0.11</option>
+            </select>
+        </h2>
         <ul class="menu-root">
             
-                <li><a href="/api/index.html" class="sidebar-link current">The Vue Constructor</a></li>
-            
-                <li><a href="/api/options.html" class="sidebar-link">Options</a></li>
-            
-                <li><a href="/api/instance-properties.html" class="sidebar-link">Instance Properties</a></li>
-            
-                <li><a href="/api/instance-methods.html" class="sidebar-link">Instance Methods</a></li>
-            
-                <li><a href="/api/global-api.html" class="sidebar-link">Global API</a></li>
-            
-                <li><a href="/api/directives.html" class="sidebar-link">Directives</a></li>
-            
-                <li><a href="/api/filters.html" class="sidebar-link">Filters</a></li>
-            
-            <li><a href="http://legacy.vuejs.org">Looking for 0.10 docs?</a></li>
-            <li style="margin:10px 0 3px">
-              <script data-gittip-username="yyx990803"
-                data-gittip-widget="button"
-                src="//gttp.co/v1.js"></script>
-            </li>
         </ul>
     </div>
 </div>
 
-<div class="content api with-sidebar">
-    <h1>The Vue Constructor</h1>
-    <div id="ad">
-        <script async type="text/javascript" src="//cdn.carbonads.com/carbon.js?zoneid=1673&serve=C6AILKT&placement=vuejs" id="_carbonads_js"></script>
-    </div>
-    <p>The <code>Vue</code> constructor is the core of Vue.js. It is a constructor function that allows you to create Vue instances. Creating a Vue instance is straightforward:</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> vm = <span class="keyword">new</span> Vue(&#123; <span class="comment">/* options */</span> &#125;)</span><br></pre></td></tr></table></figure>
-<p>When you instantiate a Vue instance, you need to pass in an option object which can include information about the DOM element, data object, mixin methods, lifecycle callbacks and more. See the full list of <a href="/api/options.html">Instantiation Options</a>.</p>
-<p>Each Vue instance is essentially a ViewModel (hence the variable name <code>vm</code> you will see throughout the docs). It has an associated DOM element <code>$el</code>, which is roughly the V in MVVM. It also has an associated JavaScript object <code>$data</code>, which corresponds to the M in MVVM. Changing the M results in updates in the V. For two-way bindings, user inputs triggered in the V results in changes in the M. For more details check out <a href="/api/instance-properties.html">Instance Properties</a>.</p>
-<p>If you provided the <code>el</code> option at instantiation, the Vue instance will immediately enter the compilation phase. Otherwise, it will wait until <code>vm.$mount()</code> is called before it starts compilation. During the compilation phase, Vue walks through the DOM and collects the directives it runs into, and “links” the data and the DOM with these directives. Once linked, these DOM nodes are now said to be managed by the Vue instance. A DOM node can only be managed by one Vue instance, and should not be compiled more than once.</p>
-<p>Vue instances proxy access to their <code>$data</code> objects, so if you have <code>vm.$data.msg</code> you can also access it as <code>vm.msg</code>. This might look a bit magical, but is totally optional. You can stick to <code>vm.$data.msg</code> for more explicit data access. However it is still important to notice the difference between <code>vm</code> and <code>vm.$data</code>, since the former cannot be observed by other Vue instances as data.</p>
-<p>It’s also worth noting that data objects do not necessarily belong to a single Vue instance - multiple ViewModels can observe the same piece of data, whether directly as <code>$data</code> or nested under it. This is useful when multiple components need to react to a shared global state object.</p>
-<p>Each Vue instance also has a number of <a href="/api/instance-methods.html">Instance Methods</a> which cover data observation, event communication and DOM manipulation.</p>
-<p>Finally, the <code>Vue</code> constructor itself also exposes the <a href="/api/global-api.html">Global API</a>, which allow you to extend the <code>Vue</code> class, configure global settings and register global custom assets such as components, directives, filters and more.</p>
 
-    <div class="footer">Caught a mistake or want to contribute to the documentation? <a href="https://github.com/vuejs/vuejs.org" target="_blank">Fork this site on Github</a>!</div>
+<div class="content api with-sidebar">
+    <div id="ad">
+  <span>Proudly sponsored by</span>
+  <br>
+  <a href="https://strikingly.com/s/careers?utm_source=v" target="_blank"
+    style="display:inline-block;padding-top:8px">
+    <img src="/images/strikingly.png">
+  </a>
 </div>
+
+    <h1></h1>
+    <h2 id="Global_Config">Global Config</h2><p><code>Vue.config</code> is an object containing Vue’s global configurations. You can modify its properties listed below before bootstrapping your application:</p>
+<h3 id="silent">silent</h3><ul>
+<li><p><strong>Type:</strong> <code>Boolean</code></p>
+</li>
+<li><p><strong>Default:</strong> <code>false</code></p>
+</li>
+<li><p><strong>Usage:</strong></p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">Vue.config.silent = <span class="literal">true</span></span><br></pre></td></tr></table></figure>
+<p>Suppress all Vue logs and warnings.</p>
+</li>
+</ul>
+<h3 id="optionMergeStrategies">optionMergeStrategies</h3><ul>
+<li><p><strong>Type:</strong> <code>Object</code></p>
+</li>
+<li><p><strong>Default:</strong> <code>{}</code></p>
+</li>
+<li><p><strong>Usage:</strong></p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">Vue.config.optionMergeStrategies._my_option = <span class="function"><span class="keyword">function</span> (<span class="params">parent, child, vm</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> child + <span class="number">1</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> Profile = Vue.extend(&#123;</span><br><span class="line">  _my_option: <span class="number">1</span></span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"><span class="comment">// Profile.options._my_option = 2</span></span><br></pre></td></tr></table></figure>
+<p>Define custom merging strategies for options.</p>
+<p>The merge strategy receives the value of that option defined on the parent and child instances as the first and second arguments, respectively. The context Vue instance is passed as the third argument.</p>
+</li>
+</ul>
+<h3 id="devtools">devtools</h3><ul>
+<li><p><strong>Type:</strong> <code>Boolean</code></p>
+</li>
+<li><p><strong>Default:</strong> <code>true</code> (<code>false</code> in production builds)</p>
+</li>
+<li><p><strong>Usage:</strong></p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// make sure to set this synchronously immediately after loading Vue</span></span><br><span class="line">Vue.config.devtools = <span class="literal">true</span></span><br></pre></td></tr></table></figure>
+<p>Configure whether to allow <a href="https://github.com/vuejs/vue-devtools" target="_blank" rel="external">vue-devtools</a> inspection. This option’s default value is <code>true</code> in development builds and <code>false</code> in production builds. You can set it to <code>true</code> to enable inspection for production builds.</p>
+</li>
+</ul>
+<h3 id="errorHandler">errorHandler</h3><ul>
+<li><p><strong>Type:</strong> <code>Function</code></p>
+</li>
+<li><p><strong>Default:</strong> Error is thrown in place</p>
+</li>
+<li><p><strong>Usage:</strong></p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">Vue.config.errorHandler = <span class="function"><span class="keyword">function</span> (<span class="params">err, vm</span>) </span>&#123;</span><br><span class="line">  <span class="comment">// handle error</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>Assign a handler for uncaught errors during component render and watchers. The handler gets called with the error and the Vue instance.</p>
+</li>
+</ul>
+<h3 id="keyCodes">keyCodes</h3><ul>
+<li><p><strong>Type:</strong> <code>Object</code></p>
+</li>
+<li><p><strong>Default:</strong> <code>{}</code></p>
+</li>
+<li><p><strong>Usage:</strong></p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">Vue.config.keyCodes = &#123; esc: <span class="number">27</span> &#125;</span><br></pre></td></tr></table></figure>
+<p>Define custom key aliases for v-on.</p>
+</li>
+</ul>
+<h2 id="Global_API">Global API</h2><h3 id="Vue-extend">Vue.extend( options )</h3>
+
+<ul>
+<li><p><strong>Arguments:</strong></p>
+<ul>
+<li><code>{Object} options</code></li>
+</ul>
+</li>
+<li><p><strong>Usage:</strong></p>
+<p>Create a “subclass” of the base Vue constructor. The argument should be an object containing component options.</p>
+<p>The special cases to note here are <code>el</code> and <code>data</code> options - they must be functions when used with <code>Vue.extend()</code>.</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">id</span>=<span class="value">"mount-point"</span>&gt;</span><span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// create reusable constructor</span></span><br><span class="line"><span class="keyword">var</span> Profile = Vue.extend(&#123;</span><br><span class="line">  template: <span class="string">'&lt;p&gt;&#123;&#123;firstName&#125;&#125; &#123;&#123;lastName&#125;&#125; aka &#123;&#123;alias&#125;&#125;&lt;/p&gt;'</span></span><br><span class="line">&#125;)</span><br><span class="line"><span class="comment">// create an instance of Profile</span></span><br><span class="line"><span class="keyword">var</span> profile = <span class="keyword">new</span> Profile(&#123;</span><br><span class="line">  data: &#123;</span><br><span class="line">    firstName: <span class="string">'Walter'</span>,</span><br><span class="line">    lastName: <span class="string">'White'</span>,</span><br><span class="line">    alias: <span class="string">'Heisenberg'</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br><span class="line"><span class="comment">// mount it on an element</span></span><br><span class="line">profile.$mount(<span class="string">'#mount-point'</span>)</span><br></pre></td></tr></table></figure>
+<p>Will result in:</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">p</span>&gt;</span>Walter White aka Heisenberg<span class="tag">&lt;/<span class="title">p</span>&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>See also:</strong> <a href="/guide/components.html">Components</a></p>
+</li>
+</ul>
+<h3 id="Vue-nextTick">Vue.nextTick( callback, [context] )</h3>
+
+<ul>
+<li><p><strong>Arguments:</strong></p>
+<ul>
+<li><code>{Function} callback</code></li>
+<li><code>{Object} [context]</code></li>
+</ul>
+</li>
+<li><p><strong>Usage:</strong></p>
+<p>Defer the callback to be executed after the next DOM update cycle. Use it immediately after you’ve changed some data to wait for the DOM update.</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// modify data</span></span><br><span class="line">vm.msg = <span class="string">'Hello'</span></span><br><span class="line"><span class="comment">// DOM not updated yet</span></span><br><span class="line">Vue.nextTick(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="comment">// DOM updated</span></span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>!!TODO: The ‘see also’ link is dependant on whether its content will remain relevant after the rewrite(<a href="https://github.com/vuejs/vuejs.org/blob/2.0/src/guide/reactivity.md#async-update-queue" target="_blank" rel="external">See Guide#Reactivity TODO for 2.0</a>)</p>
+<ul>
+<li><strong>See also:</strong> <a href="/guide/reactivity.html#Async-Update-Queue">Async Update Queue</a></li>
+</ul>
+<h3 id="Vue-set">Vue.set( object, key, value )</h3>
+
+<ul>
+<li><p><strong>Arguments:</strong></p>
+<ul>
+<li><code>{Object} object</code></li>
+<li><code>{String} key</code></li>
+<li><code>{*} value</code></li>
+</ul>
+</li>
+<li><p><strong>Returns:</strong> the set value.</p>
+</li>
+<li><p><strong>Usage:</strong></p>
+<p>Set a property on an object. If the object is reactive, ensure the property is created as a reactive property and trigger view updates. This is primarily used to get around the limitation that Vue cannot detect property additions.</p>
+</li>
+<li><p><strong>See also:</strong> <a href="/guide/reactivity.html">Reactivity in Depth</a></p>
+</li>
+</ul>
+<h3 id="Vue-delete">Vue.delete( object, key )</h3>
+
+<ul>
+<li><p><strong>Arguments:</strong></p>
+<ul>
+<li><code>{Object} object</code></li>
+<li><code>{String} key</code></li>
+</ul>
+</li>
+<li><p><strong>Usage:</strong></p>
+<p>Delete a property on an object. If the object is reactive, ensure the deletion triggers view updates. This is primarily used to get around the limitation that Vue cannot detect property deletions, but you should rarely need to use it.</p>
+</li>
+<li><p><strong>See also:</strong> <a href="/guide/reactivity.html">Reactivity in Depth</a></p>
+</li>
+</ul>
+<h3 id="Vue-directive">Vue.directive( id, [definition] )</h3>
+
+<ul>
+<li><p><strong>Arguments:</strong></p>
+<ul>
+<li><code>{String} id</code></li>
+<li><code>{Function | Object} [definition]</code></li>
+</ul>
+</li>
+<li><p><strong>Usage:</strong></p>
+<p>Register or retrieve a global directive.</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// register</span></span><br><span class="line">Vue.directive(<span class="string">'my-directive'</span>, &#123;</span><br><span class="line">  bind: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;&#125;,</span><br><span class="line">  update: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;&#125;,</span><br><span class="line">  componentUpdated: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;&#125;,</span><br><span class="line">  unbind: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;&#125;</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"><span class="comment">// register (simple function directive)</span></span><br><span class="line">Vue.directive(<span class="string">'my-directive'</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="comment">// this will be called as `update`</span></span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"><span class="comment">// getter, return the directive definition if registered</span></span><br><span class="line"><span class="keyword">var</span> myDirective = Vue.directive(<span class="string">'my-directive'</span>)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>See also:</strong> <a href="/guide/custom-directive.html">Custom Directives</a></p>
+</li>
+</ul>
+<h3 id="Vue-filter">Vue.filter( id, [definition] )</h3>
+
+<ul>
+<li><p><strong>Arguments:</strong></p>
+<ul>
+<li><code>{String} id</code></li>
+<li><code>{Function} [definition]</code></li>
+</ul>
+</li>
+<li><p><strong>Usage:</strong></p>
+<p>Register or retrieve a global filter.</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// register</span></span><br><span class="line">Vue.filter(<span class="string">'my-filter'</span>, <span class="function"><span class="keyword">function</span> (<span class="params">value</span>) </span>&#123;</span><br><span class="line">  <span class="comment">// return processed value</span></span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"><span class="comment">// getter, return the filter if registered</span></span><br><span class="line"><span class="keyword">var</span> myFilter = Vue.filter(<span class="string">'my-filter'</span>)</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="Vue-component">Vue.component( id, [definition] )</h3>
+
+<ul>
+<li><p><strong>Arguments:</strong></p>
+<ul>
+<li><code>{String} id</code></li>
+<li><code>{Function | Object} [definition]</code></li>
+</ul>
+</li>
+<li><p><strong>Usage:</strong></p>
+<p>Register or retrieve a global component.</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// register an extended constructor</span></span><br><span class="line">Vue.component(<span class="string">'my-component'</span>, Vue.extend(&#123; <span class="comment">/* ... */</span> &#125;))</span><br><span class="line"></span><br><span class="line"><span class="comment">// register an options object (automatically call Vue.extend)</span></span><br><span class="line">Vue.component(<span class="string">'my-component'</span>, &#123; <span class="comment">/* ... */</span> &#125;)</span><br><span class="line"></span><br><span class="line"><span class="comment">// retrieve a registered component (always return constructor)</span></span><br><span class="line"><span class="keyword">var</span> MyComponent = Vue.component(<span class="string">'my-component'</span>)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>See also:</strong> <a href="/guide/components.html">Components</a>.</p>
+</li>
+</ul>
+<h3 id="Vue-use">Vue.use( plugin )</h3>
+
+<ul>
+<li><p><strong>Arguments:</strong></p>
+<ul>
+<li><code>{Object | Function} plugin</code></li>
+</ul>
+</li>
+<li><p><strong>Usage:</strong></p>
+<p>Install a Vue.js plugin. If the plugin is an Object, it must expose an <code>install</code> method. If it is a function itself, it will be treated as the install method. The install method will be called with Vue as the argument.</p>
+</li>
+<li><p><strong>See also:</strong> <a href="/guide/plugins.html">Plugins</a>.</p>
+</li>
+</ul>
+<h3 id="Vue-mixin">Vue.mixin( mixin )</h3>
+
+<ul>
+<li><p><strong>Arguments:</strong></p>
+<ul>
+<li><code>{Object} mixin</code></li>
+</ul>
+</li>
+<li><p><strong>Usage:</strong></p>
+<p>Apply a mixin globally, which affects every Vue instance created afterwards. This can be used by plugin authors to inject custom behavior into components. <strong>Not recommended in application code</strong>.</p>
+</li>
+<li><p><strong>See also:</strong> <a href="/guide/mixins.html#Global-Mixin">Global Mixins</a></p>
+</li>
+</ul>
+<h3 id="Vue-compile">Vue.compile( template )</h3>
+
+<ul>
+<li><p><strong>Arguments:</strong></p>
+<ul>
+<li><code>{String} template</code></li>
+</ul>
+</li>
+<li><p><strong>Usage:</strong></p>
+<p>Compiles a template string into a render function. Only available in the standalone build.</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> res = Vue.compile(<span class="string">'&lt;div&gt;&lt;span&gt;&#123;&#123; msg &#125;&#125;&lt;/span&gt;&lt;/div&gt;'</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">new</span> Vue(&#123;</span><br><span class="line">  data: &#123;</span><br><span class="line">    msg: <span class="string">'hello'</span></span><br><span class="line">  &#125;,</span><br><span class="line">  render: res.render,</span><br><span class="line">  staticRenderFns: res.staticRenderFns</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>See also:</strong> <a href="/guide/render-function.html">Render Functions</a>.</p>
+</li>
+</ul>
+<h2 id="Options_/_Data">Options / Data</h2><h3 id="data">data</h3><ul>
+<li><p><strong>Type:</strong> <code>Object | Function</code></p>
+</li>
+<li><p><strong>Restriction:</strong> Only accepts <code>Function</code> when used in a component definition.</p>
+</li>
+<li><p><strong>Details:</strong></p>
+<p>The data object for the Vue instance. Vue will recursively convert its properties into getter/setters to make it “reactive”. <strong>The object must be plain</strong>: native objects, existing getter/setters and prototype properties are ignored. It is not recommended to observe complex objects.</p>
+<p>Once the instance is created, the original data object can be accessed as <code>vm.$data</code>. The Vue instance also proxies all the properties found on the data object.</p>
+<p>Properties that start with <code>_</code> or <code>$</code> will <strong>not</strong> be proxied on the Vue instance because they may conflict with Vue’s internal properties and API methods. You will have to access them as <code>vm.$data._property</code>.</p>
+<p>When defining a <strong>component</strong>, <code>data</code> must be declared as a function that returns the initial data object, because there will be many instances created using the same definition. If we still use a plain object for <code>data</code>, that same object will be <strong>shared by reference</strong> across all instances created! By providing a <code>data</code> function, every time a new instance is created, we can simply call it to return a fresh copy of the initial data.</p>
+<p>If required, a deep clone of the original object can be obtained by passing <code>vm.$data</code> through <code>JSON.parse(JSON.stringify(...))</code>.</p>
+</li>
+<li><p><strong>Example:</strong></p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> data = &#123; a: <span class="number">1</span> &#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// direct instance creation</span></span><br><span class="line"><span class="keyword">var</span> vm = <span class="keyword">new</span> Vue(&#123;</span><br><span class="line">  data: data</span><br><span class="line">&#125;)</span><br><span class="line">vm.a <span class="comment">// -&gt; 1</span></span><br><span class="line">vm.$data === data <span class="comment">// -&gt; true</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// must use function when in Vue.extend()</span></span><br><span class="line"><span class="keyword">var</span> Component = Vue.extend(&#123;</span><br><span class="line">  data: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> &#123; a: <span class="number">1</span> &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>See also:</strong> <a href="/guide/reactivity.html">Reactivity in Depth</a>.</p>
+</li>
+</ul>
+<h3 id="props">props</h3><ul>
+<li><p><strong>Type:</strong> <code>Array | Object</code></p>
+</li>
+<li><p><strong>Details:</strong></p>
+<p>A list/hash of attributes that are exposed to accept data from the parent component. It has a simple Array-based syntax and an alternative Object-based syntax that allows advanced configurations such as type checking, custom validation and default values.</p>
+</li>
+<li><p><strong>Example:</strong></p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// simple syntax</span></span><br><span class="line">Vue.component(<span class="string">'props-demo-simple'</span>, &#123;</span><br><span class="line">  props: [<span class="string">'size'</span>, <span class="string">'myMessage'</span>]</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"><span class="comment">// object syntax with validation</span></span><br><span class="line">Vue.component(<span class="string">'props-demo-advanced'</span>, &#123;</span><br><span class="line">  props: &#123;</span><br><span class="line">    <span class="comment">// just type check</span></span><br><span class="line">    size: <span class="built_in">Number</span>,</span><br><span class="line">    <span class="comment">// type check plus other validations</span></span><br><span class="line">    name: &#123;</span><br><span class="line">      type: <span class="built_in">String</span>,</span><br><span class="line">      <span class="keyword">default</span>: <span class="number">0</span>,</span><br><span class="line">      required: <span class="literal">true</span>,</span><br><span class="line">      validator: <span class="function"><span class="keyword">function</span> (<span class="params">value</span>) </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> value &gt; <span class="number">0</span></span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>See also:</strong> <a href="/guide/components.html#Props">Props</a></p>
+</li>
+</ul>
+<h3 id="propsData">propsData</h3><blockquote>
+<p>1.0.22+</p>
+</blockquote>
+<ul>
+<li><p><strong>Type:</strong> <code>Object</code></p>
+</li>
+<li><p><strong>Restriction:</strong> only respected in instance creation via <code>new</code>.</p>
+</li>
+<li><p><strong>Details:</strong></p>
+<p>Pass props to an instance during its creation. This is primarily intended to make unit testing easier.</p>
+</li>
+<li><p><strong>Example:</strong></p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> Comp = Vue.extend(&#123;</span><br><span class="line">  props: [<span class="string">'msg'</span>],</span><br><span class="line">  template: <span class="string">'&lt;div&gt;&#123;&#123; msg &#125;&#125;&lt;/div&gt;'</span></span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> vm = <span class="keyword">new</span> Comp(&#123;</span><br><span class="line">  propsData: &#123;</span><br><span class="line">    msg: <span class="string">'hello'</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="computed">computed</h3><ul>
+<li><p><strong>Type:</strong> <code>Object</code></p>
+</li>
+<li><p><strong>Details:</strong></p>
+<p>Computed properties to be mixed into the Vue instance. All getters and setters have their <code>this</code> context automatically bound to the Vue instance.</p>
+</li>
+<li><p><strong>Example:</strong></p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> vm = <span class="keyword">new</span> Vue(&#123;</span><br><span class="line">  data: &#123; a: <span class="number">1</span> &#125;,</span><br><span class="line">  computed: &#123;</span><br><span class="line">    <span class="comment">// get only, just need a function</span></span><br><span class="line">    aDouble: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">      <span class="keyword">return</span> <span class="keyword">this</span>.a * <span class="number">2</span></span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="comment">// both get and set</span></span><br><span class="line">    aPlus: &#123;</span><br><span class="line">      get: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">this</span>.a + <span class="number">1</span></span><br><span class="line">      &#125;,</span><br><span class="line">      set: <span class="function"><span class="keyword">function</span> (<span class="params">v</span>) </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.a = v - <span class="number">1</span></span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br><span class="line">vm.aPlus   <span class="comment">// -&gt; 2</span></span><br><span class="line">vm.aPlus = <span class="number">3</span></span><br><span class="line">vm.a       <span class="comment">// -&gt; 2</span></span><br><span class="line">vm.aDouble <span class="comment">// -&gt; 4</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>See also:</strong></p>
+<ul>
+<li><a href="/guide/computed.html">Computed Properties</a></li>
+<li><a href="/guide/reactivity.html#Inside-Computed-Properties">Reactivity in Depth: Inside Computed Properties</a></li>
+</ul>
+</li>
+</ul>
+<h3 id="methods">methods</h3><ul>
+<li><p><strong>Type:</strong> <code>Object</code></p>
+</li>
+<li><p><strong>Details:</strong></p>
+<p>Methods to be mixed into the Vue instance. You can access these methods directly on the VM instance, or use them in directive expressions. All methods will have their <code>this</code> context automatically bound to the Vue instance.</p>
+</li>
+<li><p><strong>Example:</strong></p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> vm = <span class="keyword">new</span> Vue(&#123;</span><br><span class="line">  data: &#123; a: <span class="number">1</span> &#125;,</span><br><span class="line">  methods: &#123;</span><br><span class="line">    plus: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">      <span class="keyword">this</span>.a++</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br><span class="line">vm.plus()</span><br><span class="line">vm.a <span class="comment">// 2</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>See also:</strong> <a href="/guide/events.html">Methods and Event Handling</a></p>
+</li>
+</ul>
+<h3 id="watch">watch</h3><ul>
+<li><p><strong>Type:</strong> <code>Object</code></p>
+</li>
+<li><p><strong>Details:</strong></p>
+<p>An object where keys are expressions to watch and values are the corresponding callbacks. The value can also be a string of a method name, or an Object that contains additional options. The Vue instance will call <code>$watch()</code> for each entry in the object at instantiation.</p>
+</li>
+<li><p><strong>Example:</strong></p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> vm = <span class="keyword">new</span> Vue(&#123;</span><br><span class="line">  data: &#123;</span><br><span class="line">    a: <span class="number">1</span></span><br><span class="line">  &#125;,</span><br><span class="line">  watch: &#123;</span><br><span class="line">    <span class="string">'a'</span>: <span class="function"><span class="keyword">function</span> (<span class="params">val, oldVal</span>) </span>&#123;</span><br><span class="line">      <span class="built_in">console</span>.log(<span class="string">'new: %s, old: %s'</span>, val, oldVal)</span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="comment">// string method name</span></span><br><span class="line">    <span class="string">'b'</span>: <span class="string">'someMethod'</span>,</span><br><span class="line">    <span class="comment">// deep watcher</span></span><br><span class="line">    <span class="string">'c'</span>: &#123;</span><br><span class="line">      handler: <span class="function"><span class="keyword">function</span> (<span class="params">val, oldVal</span>) </span>&#123; <span class="comment">/* ... */</span> &#125;,</span><br><span class="line">      deep: <span class="literal">true</span></span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br><span class="line">vm.a = <span class="number">2</span> <span class="comment">// -&gt; new: 2, old: 1</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>See also:</strong> <a href="#vm-watch">Instance Methods - vm.$watch</a></p>
+</li>
+</ul>
+
+    
+    <div class="footer">
+      Caught a mistake or want to contribute to the documentation?
+      <a href="https://github.com/vuejs/vuejs.org/blob/master/src/api/index.md" target="_blank">
+        Edit this page on Github!
+      </a>
+    </div>
+</div>
+
                 
             </div>
+            <script src="//cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script>
             <script src="/js/smooth-scroll.min.js"></script>
             <script src="/js/common.js"></script>
         
+
+        <script src="//cdnjs.cloudflare.com/ajax/libs/fastclick/1.0.6/fastclick.min.js"></script>
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                FastClick.attach(document.body);
+            }, false);
+        </script>
     </body>
 </html>
