@@ -6,14 +6,14 @@
         <meta charset="utf-8">
         <meta name="description" content="Vue.js - Intuitive, Fast and Composable MVVM for building interactive interfaces.">
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-        <link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:400,600|Roboto Mono' rel='stylesheet' type='text/css'>
-        <link href='//fonts.googleapis.com/css?family=Dosis:300,500&text=Vue.js' rel='stylesheet' type='text/css'>
+        <link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600|Roboto Mono' rel='stylesheet' type='text/css'>
+        <link href='//fonts.googleapis.com/css?family=Dosis:500&text=Vue.js' rel='stylesheet' type='text/css'>
         <link href="//cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css" rel='stylesheet' type='text/css'>
         <link rel="icon" href="/images/logo.png" type="image/x-icon">
         <script>
             window.PAGE_TYPE = "guide"
         </script>
-        <link rel="stylesheet" href="/css/page.css" type="text/css">
+        <link rel="stylesheet" href="/css/page.css">
         <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -26,32 +26,15 @@
         <script src="/js/vue.js"></script>
     </head>
     <body>
-        <div id="mobile-bar">
+        <div id="mobile-bar" >
             <a class="menu-button"></a>
             <a class="logo" href="/"></a>
         </div>
-        
-            <div id="header">
+        <div id="header">
   <a id="logo" href="/">
     <img src="/images/logo.png">
-    <span>Vue.js <sup>2.0 RC</sup></span>
+    <span>Vue.js</span>
   </a>
-  <span style="
-    position: absolute;
-    top: 100%;
-    left: 60px;
-    padding: 0 10px;
-    background: #ef9f00;
-    border-radius: 3px;
-    margin-top: -15px;
-    line-height: 30px;
-    color: white;
-    font-weight: bold;
-    letter-spacing: 1px;
-    box-shadow: 0 1px 2px rgba(0,0,0,.3);
-  ">
-    WORK IN PROGRESS
-  </span>
   <ul id="nav">
     <li>
   <form id="search-form">
@@ -61,7 +44,7 @@
 <li><a href="/guide/" class="nav-link current">Guide</a></li>
 <li><a href="/api/" class="nav-link">API</a></li>
 <li><a href="/examples/" class="nav-link">Examples</a></li>
-<li><a href="/blog/" class="nav-link">Blog</a></li>
+<li><a href="https://medium.com/the-vue-point" target="_blank" class="nav-link">Blog</a></li>
 <li class="nav-dropdown-container">
   <a class="nav-link">Community</a><span class="arrow"></span>
   <ul class="nav-dropdown">
@@ -76,6 +59,7 @@
   </ul>
 </div>
 
+        
             <div id="main">
                 
                     
@@ -89,7 +73,7 @@
 <li><a href="/guide/" class="nav-link current">Guide</a></li>
 <li><a href="/api/" class="nav-link">API</a></li>
 <li><a href="/examples/" class="nav-link">Examples</a></li>
-<li><a href="/blog/" class="nav-link">Blog</a></li>
+<li><a href="https://medium.com/the-vue-point" target="_blank" class="nav-link">Blog</a></li>
 <li class="nav-dropdown-container">
   <a class="nav-link">Community</a><span class="arrow"></span>
   <ul class="nav-dropdown">
@@ -112,10 +96,10 @@
         <h2>
             Guide
             <select class="version-select">
-                <option selected>2.0</option>
-                <option>1.0</option>
-                <option>0.12</option>
-                <option>0.11</option>
+                <option value="SELF" selected>2.0</option>
+                <option value="v1">1.0</option>
+                <option value="012">0.12</option>
+                <option value="011">0.11</option>
             </select>
         </h2>
         <ul class="menu-root">
@@ -123,6 +107,7 @@
                 
                 
                   <li><h3>Essentials</h3></li>
+                
                 
                 
                 
@@ -134,18 +119,12 @@
                 
                 
                 
+                
                 <li>
-                    <a href="/guide/index.html" class="sidebar-link">Getting Started</a>
+                    <a href="/guide/index.html" class="sidebar-link">Introduction</a>
                 </li>
             
                 
-                
-                
-                
-                <li>
-                    <a href="/guide/overview.html" class="sidebar-link">Overview</a>
-                </li>
-            
                 
                 
                 
@@ -158,10 +137,12 @@
                 
                 
                 
+                
                 <li>
-                    <a href="/guide/syntax.html" class="sidebar-link">Data Binding Syntax</a>
+                    <a href="/guide/syntax.html" class="sidebar-link">Template Syntax</a>
                 </li>
             
+                
                 
                 
                 
@@ -174,10 +155,12 @@
                 
                 
                 
+                
                 <li>
                     <a href="/guide/class-and-style.html" class="sidebar-link">Class and Style Bindings</a>
                 </li>
             
+                
                 
                 
                 
@@ -190,6 +173,7 @@
                 
                 
                 
+                
                 <li>
                     <a href="/guide/list.html" class="sidebar-link">List Rendering</a>
                 </li>
@@ -198,10 +182,12 @@
                 
                 
                 
+                
                 <li>
-                    <a href="/guide/events.html" class="sidebar-link">Methods and Event Handling</a>
+                    <a href="/guide/events.html" class="sidebar-link">Event Handling</a>
                 </li>
             
+                
                 
                 
                 
@@ -210,6 +196,7 @@
                     <a href="/guide/forms.html" class="sidebar-link">Form Input Bindings</a>
                 </li>
             
+                
                 
                 
                 
@@ -224,10 +211,12 @@
                   <li><h3>Advanced</h3></li>
                 
                 
+                
                 <li>
                     <a href="/guide/transitions.html" class="sidebar-link">Transitions: Entering, Leaving, and Lists</a>
                 </li>
             
+                
                 
                 
                 
@@ -240,10 +229,12 @@
                 
                 
                 
+                
                 <li>
                     <a href="/guide/render-function.html" class="sidebar-link current">Render Functions</a>
                 </li>
             
+                
                 
                 
                 
@@ -256,10 +247,12 @@
                 
                 
                 
+                
                 <li>
                     <a href="/guide/custom-directive.html" class="sidebar-link">Custom Directives</a>
                 </li>
             
+                
                 
                 
                 
@@ -272,10 +265,12 @@
                 
                 
                 
+                
                 <li>
                     <a href="/guide/plugins.html" class="sidebar-link">Plugins</a>
                 </li>
             
+                
                 
                 
                 
@@ -288,10 +283,12 @@
                 
                 
                 
+                
                 <li>
                     <a href="/guide/routing.html" class="sidebar-link">Routing</a>
                 </li>
             
+                
                 
                 
                 
@@ -304,6 +301,7 @@
                 
                 
                 
+                
                 <li>
                     <a href="/guide/unit-testing.html" class="sidebar-link">Unit Testing</a>
                 </li>
@@ -312,10 +310,32 @@
                 
                 
                 
+                
                 <li>
                     <a href="/guide/ssr.html" class="sidebar-link">Server-Side Rendering</a>
                 </li>
             
+                
+                
+                
+                
+                  <li><h3>Migrating</h3></li>
+                
+                
+                <li>
+                    <a href="/guide/migration.html" class="sidebar-link">Migration from Vue 1.x</a>
+                </li>
+            
+                
+                
+                
+                
+                
+                <li>
+                    <a href="/guide/migration-vue-router.html" class="sidebar-link">Migration from Vue Router 0.7.x</a>
+                </li>
+            
+                
                 
                 
                 
@@ -330,6 +350,7 @@
                 
                 
                 
+                
                 <li>
                     <a href="/guide/join.html" class="sidebar-link">Join the Vue.js Community!</a>
                 </li>
@@ -339,59 +360,52 @@
 </div>
 
 
-<div class="content guide with-sidebar">
+<div class="content guide with-sidebar render-function-guide">
     <div id="ad">
-  <span>Proudly sponsored by</span>
-  <br>
-  <a href="https://strikingly.com/s/careers?utm_source=v" target="_blank"
-    style="display:inline-block;padding-top:8px">
-    <img src="/images/strikingly.png">
-  </a>
+  <script async type="text/javascript" src="//cdn.carbonads.com/carbon.js?zoneid=1673&serve=C6AILKT&placement=vuejs" id="_carbonads_js"></script>
 </div>
 
     <h1>Render Functions</h1>
-    <h2 id="Basics">Basics</h2><p>Vue recommends using templates to build your HTML in the vast majority of cases. There are situations however, where you really need the full programmatic power of JavaScript. That’s where you can use the <strong>render  function</strong>, a closer-to-the-compiler alternative to templates.</p>
+    <h2 id="Basics"><a href="#Basics" class="headerlink" title="Basics"></a>Basics</h2><p>Vue recommends using templates to build your HTML in the vast majority of cases. There are situations however, where you really need the full programmatic power of JavaScript. That’s where you can use the <strong>render  function</strong>, a closer-to-the-compiler alternative to templates.</p>
 <p>Let’s dive into a simple example where a <code>render</code> function would be practical. Say you want to generate anchored headings:</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">h1</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="title">a</span> <span class="attribute">name</span>=<span class="value">"hello-world"</span> <span class="attribute">href</span>=<span class="value">"#hello-world"</span>&gt;</span></span><br><span class="line">    Hello world!</span><br><span class="line">  <span class="tag">&lt;/<span class="title">a</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="title">h1</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">h1</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">a</span> <span class="attr">name</span>=<span class="string">"hello-world"</span> <span class="attr">href</span>=<span class="string">"#hello-world"</span>&gt;</span></div><div class="line">    Hello world!</div><div class="line">  <span class="tag">&lt;/<span class="name">a</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">h1</span>&gt;</span></div></pre></td></tr></table></figure>
 <p>For the HTML above, you decide you want this component interface:</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">anchored-heading</span> <span class="attribute">:level</span>=<span class="value">"1"</span>&gt;</span>Hello world!<span class="tag">&lt;/<span class="title">anchored-heading</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">anchored-heading</span> <span class="attr">:level</span>=<span class="string">"1"</span>&gt;</span>Hello world!<span class="tag">&lt;/<span class="name">anchored-heading</span>&gt;</span></div></pre></td></tr></table></figure>
 <p>When you get started with a component that just generates a heading based on the <code>level</code> prop, you quickly arrive at this:</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">script</span> <span class="attribute">type</span>=<span class="value">"text/x-template"</span> <span class="attribute">id</span>=<span class="value">"anchored-heading-template"</span>&gt;</span><span class="xml"></span><br><span class="line">  <span class="tag">&lt;<span class="title">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="title">h1</span> <span class="attribute">v-if</span>=<span class="value">"level === 1"</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="title">slot</span>&gt;</span><span class="tag">&lt;/<span class="title">slot</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="title">h1</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="title">h2</span> <span class="attribute">v-if</span>=<span class="value">"level === 2"</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="title">slot</span>&gt;</span><span class="tag">&lt;/<span class="title">slot</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="title">h2</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="title">h3</span> <span class="attribute">v-if</span>=<span class="value">"level === 3"</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="title">slot</span>&gt;</span><span class="tag">&lt;/<span class="title">slot</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="title">h3</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="title">h4</span> <span class="attribute">v-if</span>=<span class="value">"level === 4"</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="title">slot</span>&gt;</span><span class="tag">&lt;/<span class="title">slot</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="title">h4</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="title">h5</span> <span class="attribute">v-if</span>=<span class="value">"level === 5"</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="title">slot</span>&gt;</span><span class="tag">&lt;/<span class="title">slot</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="title">h5</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="title">h6</span> <span class="attribute">v-if</span>=<span class="value">"level === 6"</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="title">slot</span>&gt;</span><span class="tag">&lt;/<span class="title">slot</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="title">h6</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br><span class="line"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">Vue.component(<span class="string">'anchored-heading'</span>, &#123;</span><br><span class="line">  template: <span class="string">'#anchored-heading-template'</span>,</span><br><span class="line">  props: &#123;</span><br><span class="line">    level: &#123;</span><br><span class="line">      type: <span class="built_in">Number</span>,</span><br><span class="line">      required: <span class="literal">true</span></span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/x-template"</span> <span class="attr">id</span>=<span class="string">"anchored-heading-template"</span>&gt;</span><span class="xml"></span></div><div class="line">  <span class="tag">&lt;<span class="name">div</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">h1</span> <span class="attr">v-if</span>=<span class="string">"level === 1"</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">slot</span>&gt;</span><span class="tag">&lt;/<span class="name">slot</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">h1</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">h2</span> <span class="attr">v-if</span>=<span class="string">"level === 2"</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">slot</span>&gt;</span><span class="tag">&lt;/<span class="name">slot</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">h2</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">h3</span> <span class="attr">v-if</span>=<span class="string">"level === 3"</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">slot</span>&gt;</span><span class="tag">&lt;/<span class="name">slot</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">h3</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">h4</span> <span class="attr">v-if</span>=<span class="string">"level === 4"</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">slot</span>&gt;</span><span class="tag">&lt;/<span class="name">slot</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">h4</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">h5</span> <span class="attr">v-if</span>=<span class="string">"level === 5"</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">slot</span>&gt;</span><span class="tag">&lt;/<span class="name">slot</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">h5</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">h6</span> <span class="attr">v-if</span>=<span class="string">"level === 6"</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">slot</span>&gt;</span><span class="tag">&lt;/<span class="name">slot</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">h6</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="code"><pre><div class="line">Vue.component(<span class="string">'anchored-heading'</span>, &#123;</div><div class="line">  template: <span class="string">'#anchored-heading-template'</span>,</div><div class="line">  props: &#123;</div><div class="line">    level: &#123;</div><div class="line">      type: <span class="built_in">Number</span>,</div><div class="line">      required: <span class="literal">true</span></div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
 <p>That template doesn’t feel great. It’s not only verbose, but we’re duplicating <code>&lt;slot&gt;&lt;/slot&gt;</code> for every heading level and will have to do the same when we add the anchor element. The whole thing is also wrapped in a useless <code>div</code> because components must contain exactly one root node.</p>
 <p>While templates work great for most components, it’s clear that this isn’t one of them. So let’s try rewriting it with a <code>render</code> function:</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">Vue.component(<span class="string">'anchored-heading'</span>, &#123;</span><br><span class="line">  render: <span class="function"><span class="keyword">function</span> (<span class="params">createElement</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> createElement(</span><br><span class="line">      <span class="string">'h'</span> + <span class="keyword">this</span>.level,   <span class="comment">// tag name</span></span><br><span class="line">      <span class="keyword">this</span>.$slots.default <span class="comment">// array of children</span></span><br><span class="line">    )</span><br><span class="line">  &#125;,</span><br><span class="line">  props: &#123;</span><br><span class="line">    level: &#123;</span><br><span class="line">      type: <span class="built_in">Number</span>,</span><br><span class="line">      required: <span class="literal">true</span></span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
-<p>Much simpler! Sort of. The code is shorter, but also requires greater familiarity with Vue instance properties. In this case, you have to know that when you pass children without a <code>slot</code> attribute into a component, like the <code>Hello world!</code> inside of <code>anchored-heading</code>, those children are stored on the component instance at <code>$slots.default</code>. If you haven’t already, <strong>it’s recommended to read through the <a href="/api/#Instance-Properties">instance properties API</a> before diving into render functions.</strong></p>
-<h2 id="createElement_Arguments"><code>createElement</code> Arguments</h2><p>The second thing you’ll have to become familiar with is how to use template features in the <code>createElement</code> function. Here are the arguments that <code>createElement</code> accepts:</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// @returns &#123;VNode&#125;</span></span><br><span class="line">createElement(</span><br><span class="line">  <span class="comment">// &#123;String | Object | Function&#125;</span></span><br><span class="line">  <span class="comment">// An HTML tag name, component options, or function</span></span><br><span class="line">  <span class="comment">// returning one of these. Required.</span></span><br><span class="line">  <span class="string">'div'</span>,</span><br><span class="line"></span><br><span class="line">  <span class="comment">// &#123;Object&#125;</span></span><br><span class="line">  <span class="comment">// An data object corresponding to the attributes</span></span><br><span class="line">  <span class="comment">// you would use in a template. Optional.</span></span><br><span class="line">  &#123;</span><br><span class="line">    <span class="comment">// ... (see more detail below)</span></span><br><span class="line">  &#125;,</span><br><span class="line"></span><br><span class="line">  <span class="comment">// &#123;String | Array | Function&#125;</span></span><br><span class="line">  <span class="comment">// Children VNodes. When the first argument is a</span></span><br><span class="line">  <span class="comment">// component definition, children must be a function</span></span><br><span class="line">  <span class="comment">// returning an array. When the first argument is an</span></span><br><span class="line">  <span class="comment">// HTML tag name, you can just use an array of</span></span><br><span class="line">  <span class="comment">// VNodes directly. Optional.</span></span><br><span class="line">  [</span><br><span class="line">    createElement(<span class="string">'h1'</span>, <span class="string">'hello world'</span>)</span><br><span class="line">    createElement(MyComponent, &#123;</span><br><span class="line">      props: &#123;</span><br><span class="line">        someProp: <span class="string">'foo'</span></span><br><span class="line">      &#125;</span><br><span class="line">    &#125;),</span><br><span class="line">    <span class="string">'bar'</span></span><br><span class="line">  ]</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
-<h3 id="The_Data_Object_In-Depth">The Data Object In-Depth</h3><figure class="highlight js"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="comment">// Normal HTML attributes</span></span><br><span class="line">  attrs: &#123;</span><br><span class="line">    id: <span class="string">'foo'</span></span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="comment">// Component props</span></span><br><span class="line">  props: &#123;</span><br><span class="line">    myProp: <span class="string">'bar'</span></span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="comment">// DOM properties</span></span><br><span class="line">  domProps: &#123;</span><br><span class="line">    innerHTML: <span class="string">'baz'</span></span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="comment">// Event handlers are nested under "on", though</span></span><br><span class="line">  <span class="comment">// modifiers such as in v-on:keyup.enter are not</span></span><br><span class="line">  <span class="comment">// supported. You'll have to manually check the</span></span><br><span class="line">  <span class="comment">// keyCode in the handler instead.</span></span><br><span class="line">  on: &#123;</span><br><span class="line">    click: <span class="keyword">this</span>.clickHandler</span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="comment">// For components only. Allows you to listen to</span></span><br><span class="line">  <span class="comment">// native events, rather than events emitted from</span></span><br><span class="line">  <span class="comment">// the component using vm.$emit.</span></span><br><span class="line">  nativeOn: &#123;</span><br><span class="line">    click: <span class="keyword">this</span>.nativeClickHandler</span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="comment">// Same API as `v-bind:class`</span></span><br><span class="line">  <span class="string">'class'</span>: &#123;</span><br><span class="line">    foo: <span class="literal">true</span>,</span><br><span class="line">    bar: <span class="literal">false</span></span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="comment">// Same API as `v-bind:style`</span></span><br><span class="line">  style: &#123;</span><br><span class="line">    color: <span class="string">'red'</span>,</span><br><span class="line">    fontSize: <span class="string">'14px'</span></span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="comment">// Other special top-level properties</span></span><br><span class="line">  key: <span class="string">'myKey'</span>,</span><br><span class="line">  ref: <span class="string">'myRef'</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="Complete_Example">Complete Example</h3><p>With this knowledge, we can now finish the component we started:</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> getChildrenTextContent = <span class="function"><span class="keyword">function</span> (<span class="params">children</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> children.map(<span class="function"><span class="keyword">function</span> (<span class="params">node</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> node.children</span><br><span class="line">      ? getChildrenTextContent(node.children)</span><br><span class="line">      : node.text</span><br><span class="line">  &#125;).join(<span class="string">''</span>)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">Vue.component(<span class="string">'anchored-heading'</span>, &#123;</span><br><span class="line">  render: <span class="function"><span class="keyword">function</span> (<span class="params">createElement</span>) </span>&#123;</span><br><span class="line">    <span class="comment">// create kebabCase id</span></span><br><span class="line">    <span class="keyword">var</span> headingId = getChildrenTextContent(<span class="keyword">this</span>.$slots.default)</span><br><span class="line">      .toLowerCase()</span><br><span class="line">      .replace(<span class="regexp">/\W+/g</span>, <span class="string">'-'</span>)</span><br><span class="line">      .replace(<span class="regexp">/(^\-|\-$)/g</span>, <span class="string">''</span>)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> createElement(</span><br><span class="line">      <span class="string">'h'</span> + <span class="keyword">this</span>.level,</span><br><span class="line">      [</span><br><span class="line">        createElement(<span class="string">'a'</span>, &#123;</span><br><span class="line">          attrs: &#123;</span><br><span class="line">            name: headingId,</span><br><span class="line">            href: <span class="string">'#'</span> + headingId</span><br><span class="line">          &#125;</span><br><span class="line">        &#125;, <span class="keyword">this</span>.$slots.default)</span><br><span class="line">      ]</span><br><span class="line">    )</span><br><span class="line">  &#125;,</span><br><span class="line">  props: &#123;</span><br><span class="line">    level: &#123;</span><br><span class="line">      type: <span class="built_in">Number</span>,</span><br><span class="line">      required: <span class="literal">true</span></span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
-<h3 id="Constraints">Constraints</h3><h4 id="VNodes_Must_Be_Unique">VNodes Must Be Unique</h4><p>All VNodes in the component tree must be unique. That means the following render function is invalid:</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">render: <span class="function"><span class="keyword">function</span> (<span class="params">createElement</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">var</span> myParagraphVNode = createElement(<span class="string">'p'</span>, <span class="string">'hi'</span>)</span><br><span class="line">  <span class="keyword">return</span> createElement(<span class="string">'div'</span>, [</span><br><span class="line">    <span class="comment">// Yikes - duplicate VNodes!</span></span><br><span class="line">    myParagraphVNode, myParagraphVNode</span><br><span class="line">  ])</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="code"><pre><div class="line">Vue.component(<span class="string">'anchored-heading'</span>, &#123;</div><div class="line">  render: <span class="function"><span class="keyword">function</span> (<span class="params">createElement</span>) </span>&#123;</div><div class="line">    <span class="keyword">return</span> createElement(</div><div class="line">      <span class="string">'h'</span> + <span class="keyword">this</span>.level,   <span class="comment">// tag name</span></div><div class="line">      <span class="keyword">this</span>.$slots.default <span class="comment">// array of children</span></div><div class="line">    )</div><div class="line">  &#125;,</div><div class="line">  props: &#123;</div><div class="line">    level: &#123;</div><div class="line">      type: <span class="built_in">Number</span>,</div><div class="line">      required: <span class="literal">true</span></div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
+<p>Much simpler! Sort of. The code is shorter, but also requires greater familiarity with Vue instance properties. In this case, you have to know that when you pass children without a <code>slot</code> attribute into a component, like the <code>Hello world!</code> inside of <code>anchored-heading</code>, those children are stored on the component instance at <code>$slots.default</code>. If you haven’t already, <strong>it’s recommended to read through the <a href="/api/#vm-slots">instance properties API</a> before diving into render functions.</strong></p>
+<h2 id="createElement-Arguments"><a href="#createElement-Arguments" class="headerlink" title="createElement Arguments"></a><code>createElement</code> Arguments</h2><p>The second thing you’ll have to become familiar with is how to use template features in the <code>createElement</code> function. Here are the arguments that <code>createElement</code> accepts:</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="comment">// @returns &#123;VNode&#125;</span></div><div class="line">createElement(</div><div class="line">  <span class="comment">// &#123;String | Object | Function&#125;</span></div><div class="line">  <span class="comment">// An HTML tag name, component options, or function</span></div><div class="line">  <span class="comment">// returning one of these. Required.</span></div><div class="line">  <span class="string">'div'</span>,</div><div class="line"></div><div class="line">  <span class="comment">// &#123;Object&#125;</span></div><div class="line">  <span class="comment">// A data object corresponding to the attributes</span></div><div class="line">  <span class="comment">// you would use in a template. Optional.</span></div><div class="line">  &#123;</div><div class="line">    <span class="comment">// (see details in the next section below)</span></div><div class="line">  &#125;,</div><div class="line"></div><div class="line">  <span class="comment">// &#123;String | Array&#125;</span></div><div class="line">  <span class="comment">// Children VNodes. Optional.</span></div><div class="line">  [</div><div class="line">    createElement(<span class="string">'h1'</span>, <span class="string">'hello world'</span>)</div><div class="line">    createElement(MyComponent, &#123;</div><div class="line">      props: &#123;</div><div class="line">        someProp: <span class="string">'foo'</span></div><div class="line">      &#125;</div><div class="line">    &#125;),</div><div class="line">    <span class="string">'bar'</span></div><div class="line">  ]</div><div class="line">)</div></pre></td></tr></table></figure>
+<h3 id="The-Data-Object-In-Depth"><a href="#The-Data-Object-In-Depth" class="headerlink" title="The Data Object In-Depth"></a>The Data Object In-Depth</h3><p>One thing to note: similar to how <code>v-bind:class</code> and <code>v-bind:style</code> have special treatment in templates, they have their own top-level fields in VNode data objects.</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><div class="line">&#123;</div><div class="line">  <span class="comment">// Same API as `v-bind:class`</span></div><div class="line">  <span class="string">'class'</span>: &#123;</div><div class="line">    foo: <span class="literal">true</span>,</div><div class="line">    bar: <span class="literal">false</span></div><div class="line">  &#125;,</div><div class="line">  <span class="comment">// Same API as `v-bind:style`</span></div><div class="line">  style: &#123;</div><div class="line">    color: <span class="string">'red'</span>,</div><div class="line">    fontSize: <span class="string">'14px'</span></div><div class="line">  &#125;,</div><div class="line">  <span class="comment">// Normal HTML attributes</span></div><div class="line">  attrs: &#123;</div><div class="line">    id: <span class="string">'foo'</span></div><div class="line">  &#125;,</div><div class="line">  <span class="comment">// Component props</span></div><div class="line">  props: &#123;</div><div class="line">    myProp: <span class="string">'bar'</span></div><div class="line">  &#125;,</div><div class="line">  <span class="comment">// DOM properties</span></div><div class="line">  domProps: &#123;</div><div class="line">    innerHTML: <span class="string">'baz'</span></div><div class="line">  &#125;,</div><div class="line">  <span class="comment">// Event handlers are nested under "on", though</span></div><div class="line">  <span class="comment">// modifiers such as in v-on:keyup.enter are not</span></div><div class="line">  <span class="comment">// supported. You'll have to manually check the</span></div><div class="line">  <span class="comment">// keyCode in the handler instead.</span></div><div class="line">  on: &#123;</div><div class="line">    click: <span class="keyword">this</span>.clickHandler</div><div class="line">  &#125;,</div><div class="line">  <span class="comment">// For components only. Allows you to listen to</span></div><div class="line">  <span class="comment">// native events, rather than events emitted from</span></div><div class="line">  <span class="comment">// the component using vm.$emit.</span></div><div class="line">  nativeOn: &#123;</div><div class="line">    click: <span class="keyword">this</span>.nativeClickHandler</div><div class="line">  &#125;,</div><div class="line">  <span class="comment">// Other special top-level properties</span></div><div class="line">  key: <span class="string">'myKey'</span>,</div><div class="line">  ref: <span class="string">'myRef'</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="Complete-Example"><a href="#Complete-Example" class="headerlink" title="Complete Example"></a>Complete Example</h3><p>With this knowledge, we can now finish the component we started:</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="keyword">var</span> getChildrenTextContent = <span class="function"><span class="keyword">function</span> (<span class="params">children</span>) </span>&#123;</div><div class="line">  <span class="keyword">return</span> children.map(<span class="function"><span class="keyword">function</span> (<span class="params">node</span>) </span>&#123;</div><div class="line">    <span class="keyword">return</span> node.children</div><div class="line">      ? getChildrenTextContent(node.children)</div><div class="line">      : node.text</div><div class="line">  &#125;).join(<span class="string">''</span>)</div><div class="line">&#125;</div><div class="line"></div><div class="line">Vue.component(<span class="string">'anchored-heading'</span>, &#123;</div><div class="line">  render: <span class="function"><span class="keyword">function</span> (<span class="params">createElement</span>) </span>&#123;</div><div class="line">    <span class="comment">// create kebabCase id</span></div><div class="line">    <span class="keyword">var</span> headingId = getChildrenTextContent(<span class="keyword">this</span>.$slots.default)</div><div class="line">      .toLowerCase()</div><div class="line">      .replace(<span class="regexp">/\W+/g</span>, <span class="string">'-'</span>)</div><div class="line">      .replace(<span class="regexp">/(^\-|\-$)/g</span>, <span class="string">''</span>)</div><div class="line"></div><div class="line">    <span class="keyword">return</span> createElement(</div><div class="line">      <span class="string">'h'</span> + <span class="keyword">this</span>.level,</div><div class="line">      [</div><div class="line">        createElement(<span class="string">'a'</span>, &#123;</div><div class="line">          attrs: &#123;</div><div class="line">            name: headingId,</div><div class="line">            href: <span class="string">'#'</span> + headingId</div><div class="line">          &#125;</div><div class="line">        &#125;, <span class="keyword">this</span>.$slots.default)</div><div class="line">      ]</div><div class="line">    )</div><div class="line">  &#125;,</div><div class="line">  props: &#123;</div><div class="line">    level: &#123;</div><div class="line">      type: <span class="built_in">Number</span>,</div><div class="line">      required: <span class="literal">true</span></div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
+<h3 id="Constraints"><a href="#Constraints" class="headerlink" title="Constraints"></a>Constraints</h3><h4 id="VNodes-Must-Be-Unique"><a href="#VNodes-Must-Be-Unique" class="headerlink" title="VNodes Must Be Unique"></a>VNodes Must Be Unique</h4><p>All VNodes in the component tree must be unique. That means the following render function is invalid:</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><div class="line">render: <span class="function"><span class="keyword">function</span> (<span class="params">createElement</span>) </span>&#123;</div><div class="line">  <span class="keyword">var</span> myParagraphVNode = createElement(<span class="string">'p'</span>, <span class="string">'hi'</span>)</div><div class="line">  <span class="keyword">return</span> createElement(<span class="string">'div'</span>, [</div><div class="line">    <span class="comment">// Yikes - duplicate VNodes!</span></div><div class="line">    myParagraphVNode, myParagraphVNode</div><div class="line">  ])</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <p>If you really want to duplicate the same element/component many times, you can do so with a factory function. For example, the following render function is a perfectly valid way of rendering 20 identical paragraphs:</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">render: <span class="function"><span class="keyword">function</span> (<span class="params">createElement</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">var</span> myParagraph =</span><br><span class="line">  <span class="keyword">return</span> createElement(<span class="string">'div'</span>,</span><br><span class="line">    <span class="built_in">Array</span>.apply(<span class="literal">null</span>, &#123; length: <span class="number">20</span> &#125;).map(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">      <span class="keyword">return</span> createElement(<span class="string">'p'</span>, <span class="string">'hi'</span>)</span><br><span class="line">    &#125;)</span><br><span class="line">  )</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="Replacing_Template_Features_with_Plain_JavaScript">Replacing Template Features with Plain JavaScript</h2><p>Wherever something can be easily accomplished in plain JavaScript, Vue render functions do not provide an appropriate alternative. For example, in a template using <code>v-if</code> and <code>v-for</code>:</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">ul</span> <span class="attribute">v-if</span>=<span class="value">"items.length"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="title">li</span> <span class="attribute">v-for</span>=<span class="value">"item in items"</span>&gt;</span>&#123;&#123; item.name &#125;&#125;<span class="tag">&lt;/<span class="title">li</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="title">ul</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">p</span> <span class="attribute">v-else</span>&gt;</span>No items found.<span class="tag">&lt;/<span class="title">p</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="code"><pre><div class="line">render: <span class="function"><span class="keyword">function</span> (<span class="params">createElement</span>) </span>&#123;</div><div class="line">  <span class="keyword">var</span> myParagraph =</div><div class="line">  <span class="keyword">return</span> createElement(<span class="string">'div'</span>,</div><div class="line">    <span class="built_in">Array</span>.apply(<span class="literal">null</span>, &#123; length: <span class="number">20</span> &#125;).map(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">      <span class="keyword">return</span> createElement(<span class="string">'p'</span>, <span class="string">'hi'</span>)</div><div class="line">    &#125;)</div><div class="line">  )</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="Replacing-Template-Features-with-Plain-JavaScript"><a href="#Replacing-Template-Features-with-Plain-JavaScript" class="headerlink" title="Replacing Template Features with Plain JavaScript"></a>Replacing Template Features with Plain JavaScript</h2><p>Wherever something can be easily accomplished in plain JavaScript, Vue render functions do not provide a proprietary alternative. For example, in a template using <code>v-if</code> and <code>v-for</code>:</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">ul</span> <span class="attr">v-if</span>=<span class="string">"items.length"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">li</span> <span class="attr">v-for</span>=<span class="string">"item in items"</span>&gt;</span>&#123;&#123; item.name &#125;&#125;<span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">ul</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">p</span> <span class="attr">v-else</span>&gt;</span>No items found.<span class="tag">&lt;/<span class="name">p</span>&gt;</span></div></pre></td></tr></table></figure>
 <p>This could be rewritten with JavaScript’s <code>if</code>/<code>else</code> and <code>map</code> in a render function:</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">render: <span class="function"><span class="keyword">function</span> (<span class="params">createElement</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">if</span> (<span class="keyword">this</span>.items.length) &#123;</span><br><span class="line">    <span class="keyword">return</span> createElement(<span class="string">'ul'</span>, <span class="keyword">this</span>.items.map(<span class="function"><span class="keyword">function</span> (<span class="params">item</span>) </span>&#123;</span><br><span class="line">      <span class="keyword">return</span> createElement(<span class="string">'li'</span>, item.name)</span><br><span class="line">    &#125;))</span><br><span class="line">  &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">    <span class="keyword">return</span> createElement(<span class="string">'p'</span>, <span class="string">'No items found.'</span>)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="Rendering_Components_with_Children">Rendering Components with Children</h2><p>As mentioned above, components with children must use a thunk: i.e. a function that returns an array of children, rather than the array of children directly. This delays children creation until the component itself is rendered, allowing more efficient re-renders.</p>
-<p>For example:</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">new</span> Vue(&#123;</span><br><span class="line">  el: <span class="string">'#demo'</span>,</span><br><span class="line">  render: <span class="function"><span class="keyword">function</span> (<span class="params">createElement</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> createElement(</span><br><span class="line">      Vue.options.components[<span class="string">'anchored-heading'</span>], &#123;</span><br><span class="line">        props: &#123;</span><br><span class="line">          level: <span class="number">1</span></span><br><span class="line">        &#125;</span><br><span class="line">      &#125;,</span><br><span class="line">      <span class="comment">// Here's the "thunk"</span></span><br><span class="line">      <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> [</span><br><span class="line">          createElement(<span class="string">'strong'</span>, <span class="string">'Hello'</span>),</span><br><span class="line">          <span class="string">' world!'</span></span><br><span class="line">        ]</span><br><span class="line">      &#125;</span><br><span class="line">    )</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
-<h2 id="JSX">JSX</h2><p>If you’re writing a lot of <code>render</code> functions, it might feel painful that we’re using 14 lines above in place of this much simpler and arguably more readable template:</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">anchored-heading</span> <span class="attribute">:level</span>=<span class="value">"1"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="title">span</span>&gt;</span>Hello<span class="tag">&lt;/<span class="title">span</span>&gt;</span> world!</span><br><span class="line"><span class="tag">&lt;/<span class="title">anchored-heading</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="code"><pre><div class="line">render: <span class="function"><span class="keyword">function</span> (<span class="params">createElement</span>) </span>&#123;</div><div class="line">  <span class="keyword">if</span> (<span class="keyword">this</span>.items.length) &#123;</div><div class="line">    <span class="keyword">return</span> createElement(<span class="string">'ul'</span>, <span class="keyword">this</span>.items.map(<span class="function"><span class="keyword">function</span> (<span class="params">item</span>) </span>&#123;</div><div class="line">      <span class="keyword">return</span> createElement(<span class="string">'li'</span>, item.name)</div><div class="line">    &#125;))</div><div class="line">  &#125; <span class="keyword">else</span> &#123;</div><div class="line">    <span class="keyword">return</span> createElement(<span class="string">'p'</span>, <span class="string">'No items found.'</span>)</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="JSX"><a href="#JSX" class="headerlink" title="JSX"></a>JSX</h2><p>If you’re writing a lot of <code>render</code> functions, it might feel painful that we’re using 14 lines above in place of this much simpler and arguably more readable template:</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">anchored-heading</span> <span class="attr">:level</span>=<span class="string">"1"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">span</span>&gt;</span>Hello<span class="tag">&lt;/<span class="name">span</span>&gt;</span> world!</div><div class="line"><span class="tag">&lt;/<span class="name">anchored-heading</span>&gt;</span></div></pre></td></tr></table></figure>
 <p>That’s why there’s a <a href="https://github.com/vuejs/babel-plugin-transform-vue-jsx" target="_blank" rel="external">Babel plugin</a> to use JSX with Vue, getting us back to a syntax that’s closer to templates:</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> AnchoredHeading <span class="keyword">from</span> <span class="string">'./AnchoredHeading.vue'</span></span><br><span class="line"></span><br><span class="line">new Vue(&#123;</span><br><span class="line">  el: <span class="string">'#demo'</span>,</span><br><span class="line">  render (h) &#123;</span><br><span class="line">    return (</span><br><span class="line">      &lt;AnchoredHeading level=&#123;1&#125;&gt;</span><br><span class="line">        &lt;span&gt;Hello&lt;/span&gt; world!</span><br><span class="line">      &lt;/AnchoredHeading&gt;</span><br><span class="line">    )</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="keyword">import</span> AnchoredHeading <span class="keyword">from</span> <span class="string">'./AnchoredHeading.vue'</span></div><div class="line"></div><div class="line"><span class="keyword">new</span> Vue(&#123;</div><div class="line">  el: <span class="string">'#demo'</span>,</div><div class="line">  render (h) &#123;</div><div class="line">    <span class="keyword">return</span> (</div><div class="line">      <span class="xml"><span class="tag">&lt;<span class="name">AnchoredHeading</span> <span class="attr">level</span>=<span class="string">&#123;1&#125;</span>&gt;</span></span></div><div class="line">        <span class="tag">&lt;<span class="name">span</span>&gt;</span>Hello<span class="tag">&lt;/<span class="name">span</span>&gt;</span> world!</div><div class="line">      <span class="tag">&lt;/<span class="name">AnchoredHeading</span>&gt;</span></div><div class="line">    )</div><div class="line">  &#125;</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
 <p class="tip">Aliasing <code>createElement</code> to <code>h</code> is a common convention you’ll see in the Vue ecosystem and is actually required for JSX. If <code>h</code> is not available in the scope, your app will throw an error.</p>
 
 <p>For more on how JSX maps to JavaScript, see the <a href="https://github.com/vuejs/babel-plugin-transform-vue-jsx#usage" target="_blank" rel="external">usage docs</a>.</p>
-<h2 id="Functional_Components">Functional Components</h2><p>The anchored heading component we created earlier is relatively simple. It doesn’t manage any state, watch any state passed to it, and it has no lifecycle methods. Really, it’s just a function with some props.</p>
+<h2 id="Functional-Components"><a href="#Functional-Components" class="headerlink" title="Functional Components"></a>Functional Components</h2><p>The anchored heading component we created earlier is relatively simple. It doesn’t manage any state, watch any state passed to it, and it has no lifecycle methods. Really, it’s just a function with some props.</p>
 <p>In cases like this, we can mark components as <code>functional</code>, which means that they’re stateless (no <code>data</code>) and instanceless (no <code>this</code> context). A <strong>functional component</strong> looks like this:</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">Vue.component(<span class="string">'my-component'</span>, &#123;</span><br><span class="line">  functional: <span class="literal">true</span>,</span><br><span class="line">  <span class="comment">// To compensate for the lack of an instance,</span></span><br><span class="line">  <span class="comment">// we are now provided a 2nd context argument.</span></span><br><span class="line">  render: <span class="function"><span class="keyword">function</span> (<span class="params">createElement, context</span>) </span>&#123;</span><br><span class="line">    <span class="comment">// ...</span></span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="comment">// Props are optional</span></span><br><span class="line">  props: &#123;</span><br><span class="line">    <span class="comment">// ...</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="code"><pre><div class="line">Vue.component(<span class="string">'my-component'</span>, &#123;</div><div class="line">  functional: <span class="literal">true</span>,</div><div class="line">  <span class="comment">// To compensate for the lack of an instance,</span></div><div class="line">  <span class="comment">// we are now provided a 2nd context argument.</span></div><div class="line">  render: <span class="function"><span class="keyword">function</span> (<span class="params">createElement, context</span>) </span>&#123;</div><div class="line">    <span class="comment">// ...</span></div><div class="line">  &#125;,</div><div class="line">  <span class="comment">// Props are optional</span></div><div class="line">  props: &#123;</div><div class="line">    <span class="comment">// ...</span></div><div class="line">  &#125;</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
 <p>Everything the component needs is passed through <code>context</code>, which is an object containing:</p>
 <ul>
 <li><code>props</code>: An object of the provided props</li>
-<li><code>children</code>: A function returning the children</li>
+<li><code>children</code>: An array of the VNode children</li>
 <li><code>slots</code>: A function returning a slots object</li>
 <li><code>data</code>: The entire data object passed to the component</li>
 <li><code>parent</code>: A reference to the parent component</li>
@@ -403,11 +417,11 @@
 <li>Manipulate children, props, or data before passing them on to a child component</li>
 </ul>
 <p>Here’s an example of a <code>smart-list</code> component that delegates to more specific components, depending on the props passed to it:</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> EmptyList = &#123; <span class="comment">/* ... */</span> &#125;</span><br><span class="line"><span class="keyword">var</span> TableList = &#123; <span class="comment">/* ... */</span> &#125;</span><br><span class="line"><span class="keyword">var</span> OrderedList = &#123; <span class="comment">/* ... */</span> &#125;</span><br><span class="line"><span class="keyword">var</span> UnorderedList = &#123; <span class="comment">/* ... */</span> &#125;</span><br><span class="line"></span><br><span class="line">Vue.component(<span class="string">'smart-list'</span>, &#123;</span><br><span class="line">  functional: <span class="literal">true</span>,</span><br><span class="line">  render: <span class="function"><span class="keyword">function</span> (<span class="params">createElement, context</span>) </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">appropriateListComponent</span> </span>&#123;</span><br><span class="line">      <span class="keyword">var</span> items = context.props.items</span><br><span class="line"></span><br><span class="line">      <span class="keyword">if</span> (items.length === <span class="number">0</span>)           <span class="keyword">return</span> EmptyList</span><br><span class="line">      <span class="keyword">if</span> (<span class="keyword">typeof</span> items[<span class="number">0</span>] === <span class="string">'object'</span>) <span class="keyword">return</span> TableList</span><br><span class="line">      <span class="keyword">if</span> (context.props.isOrdered)      <span class="keyword">return</span> OrderedList</span><br><span class="line"></span><br><span class="line">      <span class="keyword">return</span> UnorderedList</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> createElement(</span><br><span class="line">      appropriateListComponent(),</span><br><span class="line">      context.data,</span><br><span class="line">      context.children</span><br><span class="line">    )</span><br><span class="line">  &#125;,</span><br><span class="line">  props: &#123;</span><br><span class="line">    items: &#123;</span><br><span class="line">      type: <span class="built_in">Array</span>,</span><br><span class="line">      required: <span class="literal">true</span></span><br><span class="line">    &#125;,</span><br><span class="line">    isOrdered: <span class="built_in">Boolean</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
-<h3 id="slots_vs_children"><code>slots</code> vs <code>children</code></h3><p>You may wonder why we need both <code>slots</code> and <code>children</code>. Wouldn’t <code>slots().default</code> be the same as <code>children</code>? In some cases, yes - but what if you have a functional component with the following children?</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">my-functional-component</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="title">p</span> <span class="attribute">slot</span>=<span class="value">"foo"</span>&gt;</span></span><br><span class="line">    first</span><br><span class="line">  <span class="tag">&lt;/<span class="title">p</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="title">p</span>&gt;</span>second<span class="tag">&lt;/<span class="title">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="title">my-functional-component</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<p>For this component, <code>children()</code> will give you both paragraphs, <code>slots().default</code> will give you only the second, and <code>slots().foo</code> will give you only the first. Having both <code>children</code> and <code>slots</code> therefore allows you to choose whether this component knows about a slot system or perhaps delegates that responsibility to another component by simply passing along <code>children</code>.</p>
-<h2 id="Template_Compilation">Template Compilation</h2><p>You may be interested to know that Vue’s templates actually compile to render functions. This is an implementation detail you usually don’t need to know about, but if you’d like to see how specific template features are compiled, you may find it interesting. Below is a little demo using <code>Vue.compile</code> to live-compile a template string:</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="keyword">var</span> EmptyList = &#123; <span class="comment">/* ... */</span> &#125;</div><div class="line"><span class="keyword">var</span> TableList = &#123; <span class="comment">/* ... */</span> &#125;</div><div class="line"><span class="keyword">var</span> OrderedList = &#123; <span class="comment">/* ... */</span> &#125;</div><div class="line"><span class="keyword">var</span> UnorderedList = &#123; <span class="comment">/* ... */</span> &#125;</div><div class="line"></div><div class="line">Vue.component(<span class="string">'smart-list'</span>, &#123;</div><div class="line">  functional: <span class="literal">true</span>,</div><div class="line">  render: <span class="function"><span class="keyword">function</span> (<span class="params">createElement, context</span>) </span>&#123;</div><div class="line">    <span class="function"><span class="keyword">function</span> <span class="title">appropriateListComponent</span> (<span class="params"></span>) </span>&#123;</div><div class="line">      <span class="keyword">var</span> items = context.props.items</div><div class="line"></div><div class="line">      <span class="keyword">if</span> (items.length === <span class="number">0</span>)           <span class="keyword">return</span> EmptyList</div><div class="line">      <span class="keyword">if</span> (<span class="keyword">typeof</span> items[<span class="number">0</span>] === <span class="string">'object'</span>) <span class="keyword">return</span> TableList</div><div class="line">      <span class="keyword">if</span> (context.props.isOrdered)      <span class="keyword">return</span> OrderedList</div><div class="line"></div><div class="line">      <span class="keyword">return</span> UnorderedList</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="keyword">return</span> createElement(</div><div class="line">      appropriateListComponent(),</div><div class="line">      context.data,</div><div class="line">      context.children</div><div class="line">    )</div><div class="line">  &#125;,</div><div class="line">  props: &#123;</div><div class="line">    items: &#123;</div><div class="line">      type: <span class="built_in">Array</span>,</div><div class="line">      required: <span class="literal">true</span></div><div class="line">    &#125;,</div><div class="line">    isOrdered: <span class="built_in">Boolean</span></div><div class="line">  &#125;</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
+<h3 id="slots-vs-children"><a href="#slots-vs-children" class="headerlink" title="slots() vs children"></a><code>slots()</code> vs <code>children</code></h3><p>You may wonder why we need both <code>slots()</code> and <code>children</code>. Wouldn’t <code>slots().default</code> be the same as <code>children</code>? In some cases, yes - but what if you have a functional component with the following children?</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">my-functional-component</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">p</span> <span class="attr">slot</span>=<span class="string">"foo"</span>&gt;</span></div><div class="line">    first</div><div class="line">  <span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">p</span>&gt;</span>second<span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">my-functional-component</span>&gt;</span></div></pre></td></tr></table></figure>
+<p>For this component, <code>children</code> will give you both paragraphs, <code>slots().default</code> will give you only the second, and <code>slots().foo</code> will give you only the first. Having both <code>children</code> and <code>slots()</code> therefore allows you to choose whether this component knows about a slot system or perhaps delegates that responsibility to another component by simply passing along <code>children</code>.</p>
+<h2 id="Template-Compilation"><a href="#Template-Compilation" class="headerlink" title="Template Compilation"></a>Template Compilation</h2><p>You may be interested to know that Vue’s templates actually compile to render functions. This is an implementation detail you usually don’t need to know about, but if you’d like to see how specific template features are compiled, you may find it interesting. Below is a little demo using <code>Vue.compile</code> to live-compile a template string:</p>
 
 <div id="vue-compile-demo" class="demo">
   <textarea v-model="templateText" rows="10"></textarea>
@@ -479,10 +493,6 @@ console.error = function (error) {
 }
 </style>
 
-<h2 id="Misc">Misc</h2><h3 id="keep-alive"><code>keep-alive</code></h3><p>Instead of being passed through the data object, the <code>keep-alive</code> attribute actually compiles to a higher-order component. So this template:</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">my-component</span> <span class="attribute">keep-alive</span>&gt;</span><span class="tag">&lt;/<span class="title">my-component</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<p>would appear in a render function as:</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">createElement(<span class="string">'keep-alive'</span>, &#123;</span><br><span class="line">  props: &#123;</span><br><span class="line">    child: createElement(MyComponent)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
 
     
       <div class="guide-links">

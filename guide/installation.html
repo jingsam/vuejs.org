@@ -6,14 +6,14 @@
         <meta charset="utf-8">
         <meta name="description" content="Vue.js - Intuitive, Fast and Composable MVVM for building interactive interfaces.">
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-        <link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:400,600|Roboto Mono' rel='stylesheet' type='text/css'>
-        <link href='//fonts.googleapis.com/css?family=Dosis:300,500&text=Vue.js' rel='stylesheet' type='text/css'>
+        <link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600|Roboto Mono' rel='stylesheet' type='text/css'>
+        <link href='//fonts.googleapis.com/css?family=Dosis:500&text=Vue.js' rel='stylesheet' type='text/css'>
         <link href="//cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css" rel='stylesheet' type='text/css'>
         <link rel="icon" href="/images/logo.png" type="image/x-icon">
         <script>
             window.PAGE_TYPE = "guide"
         </script>
-        <link rel="stylesheet" href="/css/page.css" type="text/css">
+        <link rel="stylesheet" href="/css/page.css">
         <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -26,32 +26,15 @@
         <script src="/js/vue.js"></script>
     </head>
     <body>
-        <div id="mobile-bar">
+        <div id="mobile-bar" >
             <a class="menu-button"></a>
             <a class="logo" href="/"></a>
         </div>
-        
-            <div id="header">
+        <div id="header">
   <a id="logo" href="/">
     <img src="/images/logo.png">
-    <span>Vue.js <sup>2.0 RC</sup></span>
+    <span>Vue.js</span>
   </a>
-  <span style="
-    position: absolute;
-    top: 100%;
-    left: 60px;
-    padding: 0 10px;
-    background: #ef9f00;
-    border-radius: 3px;
-    margin-top: -15px;
-    line-height: 30px;
-    color: white;
-    font-weight: bold;
-    letter-spacing: 1px;
-    box-shadow: 0 1px 2px rgba(0,0,0,.3);
-  ">
-    WORK IN PROGRESS
-  </span>
   <ul id="nav">
     <li>
   <form id="search-form">
@@ -61,7 +44,7 @@
 <li><a href="/guide/" class="nav-link current">Guide</a></li>
 <li><a href="/api/" class="nav-link">API</a></li>
 <li><a href="/examples/" class="nav-link">Examples</a></li>
-<li><a href="/blog/" class="nav-link">Blog</a></li>
+<li><a href="https://medium.com/the-vue-point" target="_blank" class="nav-link">Blog</a></li>
 <li class="nav-dropdown-container">
   <a class="nav-link">Community</a><span class="arrow"></span>
   <ul class="nav-dropdown">
@@ -76,6 +59,7 @@
   </ul>
 </div>
 
+        
             <div id="main">
                 
                     
@@ -89,7 +73,7 @@
 <li><a href="/guide/" class="nav-link current">Guide</a></li>
 <li><a href="/api/" class="nav-link">API</a></li>
 <li><a href="/examples/" class="nav-link">Examples</a></li>
-<li><a href="/blog/" class="nav-link">Blog</a></li>
+<li><a href="https://medium.com/the-vue-point" target="_blank" class="nav-link">Blog</a></li>
 <li class="nav-dropdown-container">
   <a class="nav-link">Community</a><span class="arrow"></span>
   <ul class="nav-dropdown">
@@ -112,10 +96,10 @@
         <h2>
             Guide
             <select class="version-select">
-                <option selected>2.0</option>
-                <option>1.0</option>
-                <option>0.12</option>
-                <option>0.11</option>
+                <option value="SELF" selected>2.0</option>
+                <option value="v1">1.0</option>
+                <option value="012">0.12</option>
+                <option value="011">0.11</option>
             </select>
         </h2>
         <ul class="menu-root">
@@ -123,6 +107,7 @@
                 
                 
                   <li><h3>Essentials</h3></li>
+                
                 
                 
                 
@@ -134,18 +119,12 @@
                 
                 
                 
+                
                 <li>
-                    <a href="/guide/index.html" class="sidebar-link">Getting Started</a>
+                    <a href="/guide/index.html" class="sidebar-link">Introduction</a>
                 </li>
             
                 
-                
-                
-                
-                <li>
-                    <a href="/guide/overview.html" class="sidebar-link">Overview</a>
-                </li>
-            
                 
                 
                 
@@ -158,10 +137,12 @@
                 
                 
                 
+                
                 <li>
-                    <a href="/guide/syntax.html" class="sidebar-link">Data Binding Syntax</a>
+                    <a href="/guide/syntax.html" class="sidebar-link">Template Syntax</a>
                 </li>
             
+                
                 
                 
                 
@@ -174,10 +155,12 @@
                 
                 
                 
+                
                 <li>
                     <a href="/guide/class-and-style.html" class="sidebar-link">Class and Style Bindings</a>
                 </li>
             
+                
                 
                 
                 
@@ -190,6 +173,7 @@
                 
                 
                 
+                
                 <li>
                     <a href="/guide/list.html" class="sidebar-link">List Rendering</a>
                 </li>
@@ -198,10 +182,12 @@
                 
                 
                 
+                
                 <li>
-                    <a href="/guide/events.html" class="sidebar-link">Methods and Event Handling</a>
+                    <a href="/guide/events.html" class="sidebar-link">Event Handling</a>
                 </li>
             
+                
                 
                 
                 
@@ -210,6 +196,7 @@
                     <a href="/guide/forms.html" class="sidebar-link">Form Input Bindings</a>
                 </li>
             
+                
                 
                 
                 
@@ -224,10 +211,12 @@
                   <li><h3>Advanced</h3></li>
                 
                 
+                
                 <li>
                     <a href="/guide/transitions.html" class="sidebar-link">Transitions: Entering, Leaving, and Lists</a>
                 </li>
             
+                
                 
                 
                 
@@ -240,10 +229,12 @@
                 
                 
                 
+                
                 <li>
                     <a href="/guide/render-function.html" class="sidebar-link">Render Functions</a>
                 </li>
             
+                
                 
                 
                 
@@ -256,10 +247,12 @@
                 
                 
                 
+                
                 <li>
                     <a href="/guide/custom-directive.html" class="sidebar-link">Custom Directives</a>
                 </li>
             
+                
                 
                 
                 
@@ -272,10 +265,12 @@
                 
                 
                 
+                
                 <li>
                     <a href="/guide/plugins.html" class="sidebar-link">Plugins</a>
                 </li>
             
+                
                 
                 
                 
@@ -288,10 +283,12 @@
                 
                 
                 
+                
                 <li>
                     <a href="/guide/routing.html" class="sidebar-link">Routing</a>
                 </li>
             
+                
                 
                 
                 
@@ -304,6 +301,7 @@
                 
                 
                 
+                
                 <li>
                     <a href="/guide/unit-testing.html" class="sidebar-link">Unit Testing</a>
                 </li>
@@ -312,10 +310,32 @@
                 
                 
                 
+                
                 <li>
                     <a href="/guide/ssr.html" class="sidebar-link">Server-Side Rendering</a>
                 </li>
             
+                
+                
+                
+                
+                  <li><h3>Migrating</h3></li>
+                
+                
+                <li>
+                    <a href="/guide/migration.html" class="sidebar-link">Migration from Vue 1.x</a>
+                </li>
+            
+                
+                
+                
+                
+                
+                <li>
+                    <a href="/guide/migration-vue-router.html" class="sidebar-link">Migration from Vue Router 0.7.x</a>
+                </li>
+            
+                
                 
                 
                 
@@ -330,6 +350,7 @@
                 
                 
                 
+                
                 <li>
                     <a href="/guide/join.html" class="sidebar-link">Join the Vue.js Community!</a>
                 </li>
@@ -339,40 +360,49 @@
 </div>
 
 
-<div class="content guide with-sidebar">
+<div class="content guide with-sidebar installation-guide">
     <div id="ad">
-  <span>Proudly sponsored by</span>
-  <br>
-  <a href="https://strikingly.com/s/careers?utm_source=v" target="_blank"
-    style="display:inline-block;padding-top:8px">
-    <img src="/images/strikingly.png">
-  </a>
+  <script async type="text/javascript" src="//cdn.carbonads.com/carbon.js?zoneid=1673&serve=C6AILKT&placement=vuejs" id="_carbonads_js"></script>
 </div>
 
     <h1>Installation</h1>
-    <h3 id="Compatibility_Note">Compatibility Note</h3><p>Vue does <strong>not</strong> support IE8 and below, because it uses ECMAScript 5 features that are un-shimmable in IE8. However it supports all <a href="http://caniuse.com/#feat=es5" target="_blank" rel="external">ECMAScript 5 compliant browsers</a>.</p>
-<h3 id="Release_Notes">Release Notes</h3><p>Detailed release notes for each version are available on <a href="https://github.com/vuejs/vue/releases" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Standalone">Standalone</h2><p>Simply download and include with a script tag. <code>Vue</code> will be registered as a global variable. <strong>Pro tip: Don’t use the minified version during development. You will miss out all the nice warnings for common mistakes.</strong></p>
-<div id="downloads"><br><a class="button" href="/js/vue.js" download="">Development Version</a><span class="light info">With full warnings and debug mode</span><br><br><a class="button" href="/js/vue.min.js" download="">Production Version</a><span class="light info">Warnings stripped, 22.06kb min+gzip</span><br></div>
+    <h3 id="Compatibility-Note"><a href="#Compatibility-Note" class="headerlink" title="Compatibility Note"></a>Compatibility Note</h3><p>Vue does <strong>not</strong> support IE8 and below, because it uses ECMAScript 5 features that are un-shimmable in IE8. However it supports all <a href="http://caniuse.com/#feat=es5" target="_blank" rel="external">ECMAScript 5 compliant browsers</a>.</p>
+<h3 id="Release-Notes"><a href="#Release-Notes" class="headerlink" title="Release Notes"></a>Release Notes</h3><p>Detailed release notes for each version are available on <a href="https://github.com/vuejs/vue/releases" target="_blank" rel="external">GitHub</a>.</p>
+<h2 id="Standalone"><a href="#Standalone" class="headerlink" title="Standalone"></a>Standalone</h2><p>Simply download and include with a script tag. <code>Vue</code> will be registered as a global variable.</p>
+<p class="tip">Don’t use the minified version during development. You will miss out all the nice warnings for common mistakes!</p>
 
-<h3 id="CDN">CDN</h3><p>Available on <a href="//cdn.jsdelivr.net/vue/2.0.0-rc.1/vue.min.js">jsdelivr</a> or <a href="//cdnjs.cloudflare.com/ajax/libs/vue/2.0.0-rc.1/vue.min.js">cdnjs</a> (takes some time to sync so the latest version might not be available yet).</p>
-<p>Also available on <a href="https://npmcdn.com/vue/dist/vue.min.js" target="_blank" rel="external">npmcdn</a>, which will reflect the latest version as soon as it is published to npm. You can also browse the source of the npm package at <a href="https://npmcdn.com/vue/" target="_blank" rel="external">npmcdn.com/vue/</a>.</p>
-<h3 id="CSP_environments">CSP environments</h3><p>Some environments, such as Google Chrome Apps, enforce Content Security Policy (CSP), which prohibits the use of <code>new Function()</code> for evaluating expressions. The standalone build depends on this feature to compile templates, so is unusable in these environments.</p>
-<p>There <em>is</em> a solution however. When using Vue in a build system with <a href="https://github.com/vuejs-templates/webpack-simple-2.0" target="_blank" rel="external">Webpack + vue-loader</a> or <a href="https://github.com/vuejs-templates/browserify-simple-2.0" target="_blank" rel="external">Browserify + vueify</a>, your templates will be precompiled into <code>render</code> functions which work perfectly in CSP environments.</p>
-<h2 id="NPM">NPM</h2><p>NPM is the recommended installation method when building large scale applications with Vue. It pairs nicely with module bundlers such as <a href="http://webpack.github.io/" target="_blank" rel="external">Webpack</a> or <a href="http://browserify.org/" target="_blank" rel="external">Browserify</a>. Vue also provides accompanying tools for authoring <a href="application.html#Single-File-Components">Single File Components</a>.</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># latest stable</span></span><br><span class="line">$ npm install vue@next</span><br></pre></td></tr></table></figure>
-<h2 id="CLI">CLI</h2><p>Vue.js provides an <a href="https://github.com/vuejs/vue-cli" target="_blank" rel="external">official CLI</a> for quickly scaffolding ambitious Single Page Applications. It provides batteries-included build setups for a modern frontend workflow. It takes only a few minutes to get up and running with hot-reload, lint-on-save, and production-ready builds:</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># install vue-cli</span></span><br><span class="line">$ npm install --global vue-cli</span><br><span class="line"><span class="comment"># create a new project using the "webpack" boilerplate</span></span><br><span class="line"><span class="comment"># !!<span class="doctag"><span class="keyword">TODO</span></span>: THIS TEMPLATE DOES NOT EXIST YET</span></span><br><span class="line">$ vue init webpack-<span class="number">2.0</span> my-project</span><br><span class="line"><span class="comment"># install dependencies and go!</span></span><br><span class="line">$ <span class="built_in">cd</span> my-project</span><br><span class="line">$ npm install</span><br><span class="line">$ npm run dev</span><br></pre></td></tr></table></figure>
-<h2 id="Dev_Build">Dev Build</h2><p><strong>Important</strong>: the CommonJS bundle distributed on NPM (<code>vue.common.js</code>) is only checked in during releases on the <code>next</code> branch. To use Vue from the latest source code on GitHub, you will have to build it yourself!</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git <span class="built_in">clone</span> https://github.com/vuejs/vue.git node_modules/vue</span><br><span class="line"><span class="built_in">cd</span> node_modules/vue</span><br><span class="line">git checkout next</span><br><span class="line">npm install</span><br><span class="line">npm run build</span><br></pre></td></tr></table></figure>
-<h2 id="Bower">Bower</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># latest stable</span></span><br><span class="line">$ bower install vue<span class="comment">#next</span></span><br></pre></td></tr></table></figure>
-<h2 id="AMD_Module_Loaders">AMD Module Loaders</h2><p>The standalone downloads or versions installed via Bower are wrapped with UMD so they can be used directly as an AMD module.</p>
+<div id="downloads"><br><a class="button" href="/js/vue.js" download="">Development Version</a><span class="light info">With full warnings and debug mode</span><br><br><a class="button" href="/js/vue.min.js" download="">Production Version</a><span class="light info">Warnings stripped, 22.58kb min+gzip</span><br></div>
+
+<h3 id="CDN"><a href="#CDN" class="headerlink" title="CDN"></a>CDN</h3><p>Recommended: <a href="https://unpkg.com/vue/dist/vue.js" target="_blank" rel="external">unpkg</a>, which will reflect the latest version as soon as it is published to npm. You can also browse the source of the npm package at <a href="https://unpkg.com/vue/" target="_blank" rel="external">unpkg.com/vue/</a>.</p>
+<p>Also available on <a href="//cdn.jsdelivr.net/vue/2.0.1/vue.js">jsdelivr</a> or <a href="//cdnjs.cloudflare.com/ajax/libs/vue/2.0.1/vue.js">cdnjs</a>, but these two services take some time to sync so the latest release may not be available yet.</p>
+<h2 id="NPM"><a href="#NPM" class="headerlink" title="NPM"></a>NPM</h2><p>NPM is the recommended installation method when building large scale applications with Vue. It pairs nicely with module bundlers such as <a href="http://webpack.github.io/" target="_blank" rel="external">Webpack</a> or <a href="http://browserify.org/" target="_blank" rel="external">Browserify</a>. Vue also provides accompanying tools for authoring <a href="application.html#Single-File-Components">Single File Components</a>.</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><div class="line"><span class="comment"># latest stable</span></div><div class="line">$ npm install vue</div></pre></td></tr></table></figure>
+<h3 id="Standalone-vs-Runtime-only-Build"><a href="#Standalone-vs-Runtime-only-Build" class="headerlink" title="Standalone vs. Runtime-only Build"></a>Standalone vs. Runtime-only Build</h3><p>There are two builds available, the standalone build and the runtime-only build.</p>
+<ul>
+<li><p>The standalone build includes the compiler and supports the <code>template</code> option. <strong>It also relies on the presence of browser APIs so you cannot use it for server-side rendering.</strong></p>
+</li>
+<li><p>The runtime-only build does not include the template compiler, and does not support the <code>template</code> option. You can only use the <code>render</code> option when using the runtime-only build, but it works with single-file components, because single-file components’ templates are pre-compiled into <code>render</code> functions during the build step. The runtime-only build is roughly 30% lighter-weight than the standalone build, weighing only 16kb min+gzip.</p>
+</li>
+</ul>
+<p>By default, the NPM package exports the <strong>runtime-only</strong> build. To use the standalone build, add the following alias to your webpack config:</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><div class="line">resolve: &#123;</div><div class="line">  alias: &#123;</div><div class="line">    vue: <span class="string">'vue/dist/vue.js'</span></div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>For Browserify, you can use <a href="https://github.com/benbria/aliasify" target="_blank" rel="external">aliasify</a> to achieve the same.</p>
+<p class="tip">Do NOT do <code>import Vue from &#39;vue/dist/vue.js&#39;</code> - since some tools or 3rd party libraries may import vue as well, this may cause the app to load both the runtime and standalone builds at the same time and lead to errors.</p>
+
+<h3 id="CSP-environments"><a href="#CSP-environments" class="headerlink" title="CSP environments"></a>CSP environments</h3><p>Some environments, such as Google Chrome Apps, enforce Content Security Policy (CSP), which prohibits the use of <code>new Function()</code> for evaluating expressions. The standalone build depends on this feature to compile templates, so is unusable in these environments.</p>
+<p>On the other hand, the runtime-only build is fully CSP-compliant. When using the runtime-only build with <a href="https://github.com/vuejs-templates/webpack-simple" target="_blank" rel="external">Webpack + vue-loader</a> or <a href="https://github.com/vuejs-templates/browserify-simple" target="_blank" rel="external">Browserify + vueify</a>, your templates will be precompiled into <code>render</code> functions which work perfectly in CSP environments.</p>
+<h2 id="CLI"><a href="#CLI" class="headerlink" title="CLI"></a>CLI</h2><p>Vue.js provides an <a href="https://github.com/vuejs/vue-cli" target="_blank" rel="external">official CLI</a> for quickly scaffolding ambitious Single Page Applications. It provides batteries-included build setups for a modern frontend workflow. It takes only a few minutes to get up and running with hot-reload, lint-on-save, and production-ready builds:</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><div class="line"><span class="comment"># install vue-cli</span></div><div class="line">$ npm install --global vue-cli</div><div class="line"><span class="comment"># create a new project using the "webpack" template</span></div><div class="line">$ vue init webpack my-project</div><div class="line"><span class="comment"># install dependencies and go!</span></div><div class="line">$ <span class="built_in">cd</span> my-project</div><div class="line">$ npm install</div><div class="line">$ npm run dev</div></pre></td></tr></table></figure>
+<h2 id="Dev-Build"><a href="#Dev-Build" class="headerlink" title="Dev Build"></a>Dev Build</h2><p><strong>Important</strong>: the built files in GitHub’s <code>/dist</code> folder are only checked-in during releases. To use Vue from the latest source code on GitHub, you will have to build it yourself!</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><div class="line">git <span class="built_in">clone</span> https://github.com/vuejs/vue.git node_modules/vue</div><div class="line"><span class="built_in">cd</span> node_modules/vue</div><div class="line">npm install</div><div class="line">npm run build</div></pre></td></tr></table></figure>
+<h2 id="Bower"><a href="#Bower" class="headerlink" title="Bower"></a>Bower</h2><figure class="highlight bash"><table><tr><td class="code"><pre><div class="line"><span class="comment"># latest stable</span></div><div class="line">$ bower install vue</div></pre></td></tr></table></figure>
+<h2 id="AMD-Module-Loaders"><a href="#AMD-Module-Loaders" class="headerlink" title="AMD Module Loaders"></a>AMD Module Loaders</h2><p>The standalone downloads or versions installed via Bower are wrapped with UMD so they can be used directly as an AMD module.</p>
 
     
       <div class="guide-links">
         
         
-          <span style="float:right"><a href="/guide/index.html">Getting Started</a> →</span>
+          <span style="float:right"><a href="/guide/index.html">Introduction</a> →</span>
         
       </div>
     
